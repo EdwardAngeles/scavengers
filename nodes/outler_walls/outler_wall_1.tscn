@@ -1,15 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://dgkqngi7gtkgg"]
+[gd_scene load_steps=3 format=3 uid="uid://buko5l8r7epwi"]
 
-[ext_resource type="Texture2D" uid="uid://c0c03pokemgve" path="res://sprites/outler_wall_0.png" id="1_tun13"]
+[ext_resource type="Texture2D" uid="uid://bxk35dtvnurt5" path="res://sprites/outler_wall_1.png" id="1_rtx0f"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_676fc"]
 size = Vector2(32, 32)
 
-[node name="outler_wall_0" type="Area2D"]
+[node name="outler_wall_1" type="Area2D"]
 
 [node name="sprite" type="Sprite2D" parent="."]
 position = Vector2(16, 16)
-texture = ExtResource("1_tun13")
+texture = ExtResource("1_rtx0f")
 
 [node name="shape" type="CollisionShape2D" parent="."]
 position = Vector2(16, 16)

@@ -2,7 +2,7 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dpnhsamrpkg73"
+uid="uid://dtktqjb6bbhxq"
 path="res://.godot/imported/enemy_two_attack_1.png-4f104f33d6f19bb7324eb4fc30d721c3.ctex"
 metadata={
 "vram_texture": false
@@ -31,4 +31,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1

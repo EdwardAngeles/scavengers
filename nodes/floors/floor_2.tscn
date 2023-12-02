@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://c1u1ctaeiihh4"]
+
+[ext_resource type="PackedScene" uid="uid://dsb17hseooamx" path="res://nodes/floors/floor_parent.tscn" id="1_504t1"]
+[ext_resource type="Texture2D" uid="uid://cmc7riay2cg2x" path="res://sprites/floor_2.png" id="2_cj2vr"]
+
+[node name="floor_2" instance=ExtResource("1_504t1")]
+texture = ExtResource("2_cj2vr")

@@ -1,32 +1,45 @@
-[gd_scene load_steps=23 format=3 uid="uid://d7wgwqs8nj71"]
+[gd_scene load_steps=34 format=3 uid="uid://d7wgwqs8nj71"]
 
 [ext_resource type="Script" path="res://scripts/board.gd" id="1_8a7mm"]
-[ext_resource type="Texture2D" uid="uid://dhfx6pn00hj0v" path="res://sprites/enemy_one_attack_0.png" id="1_n0g1d"]
-[ext_resource type="Texture2D" uid="uid://bwdo0ww8hcv12" path="res://sprites/enemy_one_attack_1.png" id="2_0jv24"]
-[ext_resource type="Texture2D" uid="uid://yhyjycofr45r" path="res://sprites/enemy_one_idle_0.png" id="3_kwge4"]
-[ext_resource type="Texture2D" uid="uid://cviggeu16h8ro" path="res://sprites/enemy_one_idle_1.png" id="4_vvdyq"]
-[ext_resource type="Texture2D" uid="uid://bb12pimbig3oc" path="res://sprites/enemy_one_idle_2.png" id="5_ppuqo"]
-[ext_resource type="Texture2D" uid="uid://dbiwqlpi4k5oo" path="res://sprites/enemy_one_idle_3.png" id="6_am4pb"]
-[ext_resource type="Texture2D" uid="uid://ca6t8e21s25dr" path="res://sprites/enemy_one_idle_4.png" id="7_3tt0s"]
-[ext_resource type="Texture2D" uid="uid://bwim408x30w8m" path="res://sprites/enemy_one_idle_5.png" id="8_weprl"]
-[ext_resource type="Texture2D" uid="uid://ber4g2ug50vtl" path="res://sprites/exit.png" id="9_02r57"]
-[ext_resource type="Texture2D" uid="uid://dggww1kn1cr47" path="res://sprites/floor_0.png" id="10_v5lbd"]
-[ext_resource type="Texture2D" uid="uid://dvggmuub4xgvx" path="res://sprites/floor_1.png" id="11_yh7ri"]
-[ext_resource type="Texture2D" uid="uid://dy6253d75p6w6" path="res://sprites/floor_2.png" id="12_jypps"]
-[ext_resource type="Texture2D" uid="uid://ccgkpn3x7nofr" path="res://sprites/player_idle_0.png" id="13_rao5w"]
-[ext_resource type="Texture2D" uid="uid://c0c03pokemgve" path="res://sprites/outler_wall_0.png" id="15_m1goc"]
-[ext_resource type="Texture2D" uid="uid://b6cpb65eje4u2" path="res://sprites/outler_wall_1.png" id="16_a0pn6"]
-[ext_resource type="Texture2D" uid="uid://dldtxtxwosul5" path="res://sprites/outler_wall_2.png" id="17_hfwk7"]
-[ext_resource type="Texture2D" uid="uid://0f1a6ohalhy" path="res://sprites/wall_0.png" id="18_nclnj"]
-[ext_resource type="Texture2D" uid="uid://bdt76h63viwks" path="res://sprites/wall_1.png" id="19_gosxq"]
-[ext_resource type="Texture2D" uid="uid://no4tn7pna7ex" path="res://sprites/wall_3.png" id="20_tdt0q"]
-[ext_resource type="Texture2D" uid="uid://duaw8ebweohp7" path="res://sprites/wall_damaged_0.png" id="21_08yur"]
-[ext_resource type="Texture2D" uid="uid://bq7atg3asxuqh" path="res://sprites/wall_damaged_7.png" id="22_t2w1b"]
+[ext_resource type="Texture2D" uid="uid://coc6nlsbxigfx" path="res://sprites/enemy_one_attack_0.png" id="1_n0g1d"]
+[ext_resource type="Texture2D" uid="uid://6sl7dr7hp51q" path="res://sprites/enemy_one_attack_1.png" id="2_0jv24"]
+[ext_resource type="PackedScene" uid="uid://e3ls2vegbi13" path="res://nodes/floors/floor_0.tscn" id="2_2xs7r"]
+[ext_resource type="PackedScene" uid="uid://dgkqngi7gtkgg" path="res://nodes/outler_walls/outler_wall_0.tscn" id="2_4llki"]
+[ext_resource type="PackedScene" uid="uid://da08suwdl0jvf" path="res://nodes/floors/floor_1.tscn" id="3_igyg0"]
+[ext_resource type="Texture2D" uid="uid://bww0rx6jovd5q" path="res://sprites/enemy_one_idle_0.png" id="3_kwge4"]
+[ext_resource type="PackedScene" uid="uid://buko5l8r7epwi" path="res://nodes/outler_walls/outler_wall_1.tscn" id="3_u7nj5"]
+[ext_resource type="PackedScene" uid="uid://c1u1ctaeiihh4" path="res://nodes/floors/floor_2.tscn" id="4_irl2s"]
+[ext_resource type="Texture2D" uid="uid://mwjefjgy4sct" path="res://sprites/enemy_one_idle_1.png" id="4_vvdyq"]
+[ext_resource type="PackedScene" uid="uid://w1gtnl1sm8fm" path="res://nodes/outler_walls/outler_wall_2.tscn" id="4_yijmb"]
+[ext_resource type="PackedScene" uid="uid://bxkrs0qi121th" path="res://nodes/floors/floor_3.tscn" id="5_73q05"]
+[ext_resource type="Texture2D" uid="uid://chph00hhp7d5g" path="res://sprites/enemy_one_idle_2.png" id="5_ppuqo"]
+[ext_resource type="PackedScene" uid="uid://b6lsfsprbtxnv" path="res://nodes/floors/floor_4.tscn" id="6_5exti"]
+[ext_resource type="Texture2D" uid="uid://c2n0iplqf5n15" path="res://sprites/enemy_one_idle_3.png" id="6_am4pb"]
+[ext_resource type="Texture2D" uid="uid://dd4a3lam2yl7f" path="res://sprites/enemy_one_idle_4.png" id="7_3tt0s"]
+[ext_resource type="PackedScene" uid="uid://cp0mu0p6lvojt" path="res://nodes/floors/floor_5.tscn" id="7_45rc0"]
+[ext_resource type="PackedScene" uid="uid://bey5oqqxiglek" path="res://nodes/floors/floor_6.tscn" id="8_6aoh6"]
+[ext_resource type="Texture2D" uid="uid://n3486pb8joln" path="res://sprites/enemy_one_idle_5.png" id="8_weprl"]
+[ext_resource type="Texture2D" uid="uid://bbv4hu1k5dpbt" path="res://sprites/exit.png" id="9_02r57"]
+[ext_resource type="PackedScene" uid="uid://b704nff0nqf65" path="res://nodes/floors/floor_7.tscn" id="9_xceav"]
+[ext_resource type="Texture2D" uid="uid://cnuo4tcpphita" path="res://sprites/floor_0.png" id="10_v5lbd"]
+[ext_resource type="Texture2D" uid="uid://c34w1khkevofb" path="res://sprites/floor_1.png" id="11_yh7ri"]
+[ext_resource type="Texture2D" uid="uid://cmc7riay2cg2x" path="res://sprites/floor_2.png" id="12_jypps"]
+[ext_resource type="Texture2D" uid="uid://c5a1427bjuba4" path="res://sprites/player_idle_0.png" id="13_rao5w"]
+[ext_resource type="Texture2D" uid="uid://br0a6nhn27l2m" path="res://sprites/outler_wall_0.png" id="15_m1goc"]
+[ext_resource type="Texture2D" uid="uid://bxk35dtvnurt5" path="res://sprites/outler_wall_1.png" id="16_a0pn6"]
+[ext_resource type="Texture2D" uid="uid://ffgghqp1x2uh" path="res://sprites/outler_wall_2.png" id="17_hfwk7"]
+[ext_resource type="Texture2D" uid="uid://pltrad4tliwb" path="res://sprites/wall_0.png" id="18_nclnj"]
+[ext_resource type="Texture2D" uid="uid://b4puwn6yeu40i" path="res://sprites/wall_1.png" id="19_gosxq"]
+[ext_resource type="Texture2D" uid="uid://dqohkf6ffnj57" path="res://sprites/wall_3.png" id="20_tdt0q"]
+[ext_resource type="Texture2D" uid="uid://shc8mqgkeytu" path="res://sprites/wall_damaged_0.png" id="21_08yur"]
+[ext_resource type="Texture2D" uid="uid://bmxgbmxikhyrk" path="res://sprites/wall_damaged_7.png" id="22_t2w1b"]
 
 [node name="world" type="Node2D"]
 
 [node name="board" type="Node2D" parent="."]
 script = ExtResource("1_8a7mm")
+scn_outler_walls = Array[PackedScene]([ExtResource("2_4llki"), ExtResource("3_u7nj5"), ExtResource("4_yijmb")])
+scn_floors = Array[PackedScene]([ExtResource("2_2xs7r"), ExtResource("3_igyg0"), ExtResource("4_irl2s"), ExtResource("5_73q05"), ExtResource("6_5exti"), ExtResource("7_45rc0"), ExtResource("8_6aoh6"), ExtResource("9_xceav")])
 
 [node name="playground" type="Node2D" parent="."]
 visible = false
@@ -80,8 +93,9 @@ position = Vector2(176, 16)
 texture = ExtResource("12_jypps")
 
 [node name="PlayerIdle0" type="Sprite2D" parent="playground"]
-position = Vector2(273, 50)
+position = Vector2(256, 256)
 texture = ExtResource("13_rao5w")
+offset = Vector2(16, 16)
 
 [node name="OutlerWall0" type="Sprite2D" parent="playground"]
 position = Vector2(48, 16)
@@ -116,5 +130,5 @@ position = Vector2(184, 242)
 texture = ExtResource("21_08yur")
 
 [node name="WallDamaged7" type="Sprite2D" parent="playground"]
-position = Vector2(270, 228)
+position = Vector2(270, 304)
 texture = ExtResource("22_t2w1b")

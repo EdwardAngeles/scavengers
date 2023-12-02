@@ -2,7 +2,7 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bb12pimbig3oc"
+uid="uid://chph00hhp7d5g"
 path="res://.godot/imported/enemy_one_idle_2.png-1b60b2e05fef5f7777aef3bbeb5ff933.ctex"
 metadata={
 "vram_texture": false
@@ -31,4 +31,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1

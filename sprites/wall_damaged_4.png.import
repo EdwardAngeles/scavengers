@@ -2,7 +2,7 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://is6ariis7ve5"
+uid="uid://c5mj3vakmvu0b"
 path="res://.godot/imported/wall_damaged_4.png-81441ab4a33223f06c215e341e9d5290.ctex"
 metadata={
 "vram_texture": false
@@ -31,4 +31,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=0
+detect_3d/compress_to=1
