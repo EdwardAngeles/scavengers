@@ -1,0 +1,17 @@
+[remap]
+
+importer="font_data_bmfont"
+type="FontFile"
+uid="uid://ctaomovnapmjl"
+path="res://.godot/imported/font_fps.fnt-138d05e4dbe5c1c1fea83362d5e42cc9.fontdata"
+
+[deps]
+
+source_file="res://fonts/font_fps.fnt"
+dest_files=["res://.godot/imported/font_fps.fnt-138d05e4dbe5c1c1fea83362d5e42cc9.fontdata"]
+
+[params]
+
+fallbacks=[]
+compress=true
+scaling_mode=2

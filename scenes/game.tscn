@@ -1,0 +1,120 @@
+[gd_scene load_steps=23 format=3 uid="uid://d7wgwqs8nj71"]
+
+[ext_resource type="Script" path="res://scripts/board.gd" id="1_8a7mm"]
+[ext_resource type="Texture2D" uid="uid://dhfx6pn00hj0v" path="res://sprites/enemy_one_attack_0.png" id="1_n0g1d"]
+[ext_resource type="Texture2D" uid="uid://bwdo0ww8hcv12" path="res://sprites/enemy_one_attack_1.png" id="2_0jv24"]
+[ext_resource type="Texture2D" uid="uid://yhyjycofr45r" path="res://sprites/enemy_one_idle_0.png" id="3_kwge4"]
+[ext_resource type="Texture2D" uid="uid://cviggeu16h8ro" path="res://sprites/enemy_one_idle_1.png" id="4_vvdyq"]
+[ext_resource type="Texture2D" uid="uid://bb12pimbig3oc" path="res://sprites/enemy_one_idle_2.png" id="5_ppuqo"]
+[ext_resource type="Texture2D" uid="uid://dbiwqlpi4k5oo" path="res://sprites/enemy_one_idle_3.png" id="6_am4pb"]
+[ext_resource type="Texture2D" uid="uid://ca6t8e21s25dr" path="res://sprites/enemy_one_idle_4.png" id="7_3tt0s"]
+[ext_resource type="Texture2D" uid="uid://bwim408x30w8m" path="res://sprites/enemy_one_idle_5.png" id="8_weprl"]
+[ext_resource type="Texture2D" uid="uid://ber4g2ug50vtl" path="res://sprites/exit.png" id="9_02r57"]
+[ext_resource type="Texture2D" uid="uid://dggww1kn1cr47" path="res://sprites/floor_0.png" id="10_v5lbd"]
+[ext_resource type="Texture2D" uid="uid://dvggmuub4xgvx" path="res://sprites/floor_1.png" id="11_yh7ri"]
+[ext_resource type="Texture2D" uid="uid://dy6253d75p6w6" path="res://sprites/floor_2.png" id="12_jypps"]
+[ext_resource type="Texture2D" uid="uid://ccgkpn3x7nofr" path="res://sprites/player_idle_0.png" id="13_rao5w"]
+[ext_resource type="Texture2D" uid="uid://c0c03pokemgve" path="res://sprites/outler_wall_0.png" id="15_m1goc"]
+[ext_resource type="Texture2D" uid="uid://b6cpb65eje4u2" path="res://sprites/outler_wall_1.png" id="16_a0pn6"]
+[ext_resource type="Texture2D" uid="uid://dldtxtxwosul5" path="res://sprites/outler_wall_2.png" id="17_hfwk7"]
+[ext_resource type="Texture2D" uid="uid://0f1a6ohalhy" path="res://sprites/wall_0.png" id="18_nclnj"]
+[ext_resource type="Texture2D" uid="uid://bdt76h63viwks" path="res://sprites/wall_1.png" id="19_gosxq"]
+[ext_resource type="Texture2D" uid="uid://no4tn7pna7ex" path="res://sprites/wall_3.png" id="20_tdt0q"]
+[ext_resource type="Texture2D" uid="uid://duaw8ebweohp7" path="res://sprites/wall_damaged_0.png" id="21_08yur"]
+[ext_resource type="Texture2D" uid="uid://bq7atg3asxuqh" path="res://sprites/wall_damaged_7.png" id="22_t2w1b"]
+
+[node name="world" type="Node2D"]
+
+[node name="board" type="Node2D" parent="."]
+script = ExtResource("1_8a7mm")
+
+[node name="playground" type="Node2D" parent="."]
+visible = false
+
+[node name="EnemyOneAttack0" type="Sprite2D" parent="playground"]
+position = Vector2(246, 58)
+texture = ExtResource("1_n0g1d")
+
+[node name="EnemyOneAttack1" type="Sprite2D" parent="playground"]
+position = Vector2(188, 88)
+texture = ExtResource("2_0jv24")
+
+[node name="EnemyOneIdle0" type="Sprite2D" parent="playground"]
+position = Vector2(176, 146)
+texture = ExtResource("3_kwge4")
+
+[node name="EnemyOneIdle1" type="Sprite2D" parent="playground"]
+position = Vector2(240, 113)
+texture = ExtResource("4_vvdyq")
+
+[node name="EnemyOneIdle2" type="Sprite2D" parent="playground"]
+position = Vector2(219, 213)
+texture = ExtResource("5_ppuqo")
+
+[node name="EnemyOneIdle3" type="Sprite2D" parent="playground"]
+position = Vector2(279, 156)
+texture = ExtResource("6_am4pb")
+
+[node name="EnemyOneIdle4" type="Sprite2D" parent="playground"]
+position = Vector2(142, 92)
+texture = ExtResource("7_3tt0s")
+
+[node name="EnemyOneIdle5" type="Sprite2D" parent="playground"]
+position = Vector2(67, 78)
+texture = ExtResource("8_weprl")
+
+[node name="Exit" type="Sprite2D" parent="playground"]
+position = Vector2(240, 16)
+texture = ExtResource("9_02r57")
+
+[node name="Floor0" type="Sprite2D" parent="playground"]
+position = Vector2(208, 16)
+texture = ExtResource("10_v5lbd")
+
+[node name="Floor1" type="Sprite2D" parent="playground"]
+position = Vector2(144, 16)
+texture = ExtResource("11_yh7ri")
+
+[node name="Floor2" type="Sprite2D" parent="playground"]
+position = Vector2(176, 16)
+texture = ExtResource("12_jypps")
+
+[node name="PlayerIdle0" type="Sprite2D" parent="playground"]
+position = Vector2(273, 50)
+texture = ExtResource("13_rao5w")
+
+[node name="OutlerWall0" type="Sprite2D" parent="playground"]
+position = Vector2(48, 16)
+texture = ExtResource("15_m1goc")
+
+[node name="OutlerWall1" type="Sprite2D" parent="playground"]
+position = Vector2(304, 16)
+texture = ExtResource("16_a0pn6")
+
+[node name="OutlerWall2" type="Sprite2D" parent="playground"]
+position = Vector2(112, 16)
+texture = ExtResource("17_hfwk7")
+
+[node name="OutlerWall3" type="Sprite2D" parent="playground"]
+position = Vector2(80, 16)
+texture = ExtResource("17_hfwk7")
+
+[node name="Wall0" type="Sprite2D" parent="playground"]
+position = Vector2(16, 16)
+texture = ExtResource("18_nclnj")
+
+[node name="Wall1" type="Sprite2D" parent="playground"]
+position = Vector2(225, 271)
+texture = ExtResource("19_gosxq")
+
+[node name="Wall3" type="Sprite2D" parent="playground"]
+position = Vector2(272, 16)
+texture = ExtResource("20_tdt0q")
+
+[node name="WallDamaged0" type="Sprite2D" parent="playground"]
+position = Vector2(184, 242)
+texture = ExtResource("21_08yur")
+
+[node name="WallDamaged7" type="Sprite2D" parent="playground"]
+position = Vector2(270, 228)
+texture = ExtResource("22_t2w1b")

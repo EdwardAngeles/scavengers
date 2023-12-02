@@ -1,0 +1,17 @@
+[remap]
+
+importer="font_data_bmfont"
+type="FontFile"
+uid="uid://cdd7jovwr7bfj"
+path="res://.godot/imported/press_start_24.fnt-69fdb4f525594f5444bb2305e52e12f3.fontdata"
+
+[deps]
+
+source_file="res://fonts/press_start_24.fnt"
+dest_files=["res://.godot/imported/press_start_24.fnt-69fdb4f525594f5444bb2305e52e12f3.fontdata"]
+
+[params]
+
+fallbacks=[]
+compress=true
+scaling_mode=2
