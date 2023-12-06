@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://shc8mqgkeytu"
-path="res://.godot/imported/wall_damaged_0.png-b07a9ef8a6f89356a52f24690bcd5da0.ctex"
+uid="uid://cbps8hluo7ile"
+path="res://.godot/imported/inner_wall_2_damaged.png-fb00744b65286405645b3d32a45d79c6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/wall_damaged_0.png"
-dest_files=["res://.godot/imported/wall_damaged_0.png-b07a9ef8a6f89356a52f24690bcd5da0.ctex"]
+source_file="res://sprites/inner_wall_2_damaged.png"
+dest_files=["res://.godot/imported/inner_wall_2_damaged.png-fb00744b65286405645b3d32a45d79c6.ctex"]
 
 [params]
 

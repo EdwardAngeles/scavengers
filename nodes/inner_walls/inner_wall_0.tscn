@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://dx81qxqbersmj"]
+
+[ext_resource type="PackedScene" uid="uid://cfyav2hrjdi8w" path="res://nodes/inner_walls/inner_wall_parent.tscn" id="1_iypcu"]
+[ext_resource type="Texture2D" uid="uid://shc8mqgkeytu" path="res://sprites/inner_wall_0_damaged.png" id="2_jqo65"]
+[ext_resource type="Texture2D" uid="uid://pltrad4tliwb" path="res://sprites/inner_wall_0.png" id="3_gb3ig"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_j20w4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_jqo65")
+}],
+"loop": true,
+"name": &"damaged",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_gb3ig")
+}],
+"loop": true,
+"name": &"normal",
+"speed": 5.0
+}]
+
+[node name="inner_wall_0" instance=ExtResource("1_iypcu")]
+
+[node name="sprite" parent="." index="0"]
+sprite_frames = SubResource("SpriteFrames_j20w4")

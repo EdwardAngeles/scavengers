@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://d7wgwqs8nj71"]
+[gd_scene load_steps=36 format=3 uid="uid://d7wgwqs8nj71"]
 
 [ext_resource type="Script" path="res://scripts/board.gd" id="1_8a7mm"]
 [ext_resource type="Texture2D" uid="uid://coc6nlsbxigfx" path="res://sprites/enemy_one_attack_0.png" id="1_n0g1d"]
@@ -24,22 +24,31 @@
 [ext_resource type="Texture2D" uid="uid://cnuo4tcpphita" path="res://sprites/floor_0.png" id="10_v5lbd"]
 [ext_resource type="Texture2D" uid="uid://c34w1khkevofb" path="res://sprites/floor_1.png" id="11_yh7ri"]
 [ext_resource type="Texture2D" uid="uid://cmc7riay2cg2x" path="res://sprites/floor_2.png" id="12_jypps"]
+[ext_resource type="PackedScene" uid="uid://dx81qxqbersmj" path="res://nodes/inner_walls/inner_wall_0.tscn" id="13_qdsu1"]
 [ext_resource type="Texture2D" uid="uid://c5a1427bjuba4" path="res://sprites/player_idle_0.png" id="13_rao5w"]
+[ext_resource type="PackedScene" uid="uid://deebd4ifrkqay" path="res://nodes/inner_walls/inner_wall_1.tscn" id="14_0wr0q"]
 [ext_resource type="Texture2D" uid="uid://br0a6nhn27l2m" path="res://sprites/outler_wall_0.png" id="15_m1goc"]
 [ext_resource type="Texture2D" uid="uid://bxk35dtvnurt5" path="res://sprites/outler_wall_1.png" id="16_a0pn6"]
 [ext_resource type="Texture2D" uid="uid://ffgghqp1x2uh" path="res://sprites/outler_wall_2.png" id="17_hfwk7"]
-[ext_resource type="Texture2D" uid="uid://pltrad4tliwb" path="res://sprites/wall_0.png" id="18_nclnj"]
-[ext_resource type="Texture2D" uid="uid://b4puwn6yeu40i" path="res://sprites/wall_1.png" id="19_gosxq"]
-[ext_resource type="Texture2D" uid="uid://dqohkf6ffnj57" path="res://sprites/wall_3.png" id="20_tdt0q"]
-[ext_resource type="Texture2D" uid="uid://shc8mqgkeytu" path="res://sprites/wall_damaged_0.png" id="21_08yur"]
-[ext_resource type="Texture2D" uid="uid://bmxgbmxikhyrk" path="res://sprites/wall_damaged_7.png" id="22_t2w1b"]
+[ext_resource type="Texture2D" uid="uid://pltrad4tliwb" path="res://sprites/inner_wall_0.png" id="18_nclnj"]
+[ext_resource type="Texture2D" uid="uid://b4puwn6yeu40i" path="res://sprites/inner_wall_1.png" id="19_gosxq"]
+[ext_resource type="Texture2D" uid="uid://dqohkf6ffnj57" path="res://sprites/inner_wall_3.png" id="20_tdt0q"]
+[ext_resource type="Texture2D" uid="uid://shc8mqgkeytu" path="res://sprites/inner_wall_0_damaged.png" id="21_08yur"]
+[ext_resource type="Texture2D" uid="uid://bmxgbmxikhyrk" path="res://sprites/inner_wall_7_damaged.png" id="22_t2w1b"]
 
 [node name="world" type="Node2D"]
 
 [node name="board" type="Node2D" parent="."]
 script = ExtResource("1_8a7mm")
-scn_outler_walls = Array[PackedScene]([ExtResource("2_4llki"), ExtResource("3_u7nj5"), ExtResource("4_yijmb")])
 scn_floors = Array[PackedScene]([ExtResource("2_2xs7r"), ExtResource("3_igyg0"), ExtResource("4_irl2s"), ExtResource("5_73q05"), ExtResource("6_5exti"), ExtResource("7_45rc0"), ExtResource("8_6aoh6"), ExtResource("9_xceav")])
+scn_outler_walls = Array[PackedScene]([ExtResource("2_4llki"), ExtResource("3_u7nj5"), ExtResource("4_yijmb")])
+scn_inner_walls = Array[PackedScene]([ExtResource("13_qdsu1"), ExtResource("14_0wr0q")])
+
+[node name="floors" type="Node2D" parent="board"]
+
+[node name="outler_walls" type="Node2D" parent="board"]
+
+[node name="inner_walls" type="Node2D" parent="board"]
 
 [node name="playground" type="Node2D" parent="."]
 visible = false
@@ -93,7 +102,7 @@ position = Vector2(176, 16)
 texture = ExtResource("12_jypps")
 
 [node name="PlayerIdle0" type="Sprite2D" parent="playground"]
-position = Vector2(256, 256)
+position = Vector2(253, 255)
 texture = ExtResource("13_rao5w")
 offset = Vector2(16, 16)
 
