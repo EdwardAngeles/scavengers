@@ -11,7 +11,7 @@ var food_amount := MinMax.new(1, 5)
 var inner_walls_amount := MinMax.new(5, 9)
 
 var board_positions: Dictionary = {}
-var board_positions_occupied : Dictionary  :
+var board_positions_occupied: Dictionary:
 	set(value): pass
 	get:
 		var occupied_positions = {}
@@ -19,7 +19,7 @@ var board_positions_occupied : Dictionary  :
 			if board_positions[pos] == null: continue
 			occupied_positions[pos] = board_positions[pos]
 		return occupied_positions
-var board_positions_empty : Dictionary  :
+var board_positions_empty: Dictionary:
 	set(value): pass
 	get:
 		var empty_positions = {}
