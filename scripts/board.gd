@@ -1,11 +1,32 @@
 extends Node2D
 
 
-var viewport_width: int = ProjectSettings.get_setting("display/window/size/viewport_width")
-var viewport_height: int = ProjectSettings.get_setting("display/window/size/viewport_height")
+var board_size := Vector2(
+	ProjectSettings.get_setting("display/window/size/viewport_width"),
+	ProjectSettings.get_setting("display/window/size/viewport_height")
+)
+var cell_size := Vector2(32, 32)
 
-const cell_size_width := 32
-const cell_size_height := 32 
+var food_amount := MinMax.new(1, 5)
+var inner_walls_amount := MinMax.new(5, 9)
+
+var board_positions: Dictionary = {}
+var board_positions_occupied : Dictionary  :
+	set(value): pass
+	get:
+		var occupied_positions = {}
+		for pos in board_positions:
+			if board_positions[pos] == null: continue
+			occupied_positions[pos] = board_positions[pos]
+		return occupied_positions
+var board_positions_empty : Dictionary  :
+	set(value): pass
+	get:
+		var empty_positions = {}
+		for pos in board_positions:
+			if board_positions[pos] != null: continue
+			empty_positions[pos] = null
+		return empty_positions
 
 @export var scn_floors : Array[PackedScene] = []
 @export var scn_outler_walls : Array[PackedScene] = []
@@ -15,18 +36,12 @@ const cell_size_height := 32
 @onready var outler_walls = $outler_walls
 @onready var inner_walls = $inner_walls
 
-const inner_walls_count_min = 5
-const inner_walls_count_max = 9
-
-var food_count_min = 1
-var food_count_max = 5
-
 
 func _ready():
-	#_init_grid_positions_available()
+	init_board_positions()
 	
 	generate_floors()
-	generate_outler_wall()
+	generate_outer_wall()
 	generate_inner_wall()
 
 
@@ -34,46 +49,30 @@ func _process(delta):
 	pass
 
 
+func init_board_positions() -> void:
+	for x in range(0, board_size.x, cell_size.x):
+		for y in range(0, board_size.y, cell_size.y):
+			board_positions[Vector2(x, y)] = null
+
+
 func generate_floors() -> void:
-	for x in range(0, viewport_width, cell_size_width):
-		for y in range(0, viewport_height, cell_size_height):
-			Utils.instance_on_parent(floors, scn_floors.pick_random(), Vector2(x, y))
+	for pos in board_positions:
+		Utils.instance_on_parent(self, scn_floors.pick_random(), pos)
 
 
-func generate_outler_wall() -> void:
-	for x in range(0, viewport_width, cell_size_width):
-		for y in range(0, viewport_height, cell_size_height):
-			if x == 0 or x == 288 or y == 0 or y == 288:
-				Utils.instance_on_parent(outler_walls, scn_outler_walls.pick_random(), Vector2(x, y))
+func generate_outer_wall() -> void:
+	for pos in board_positions:
+		if !(pos.x == 0 or pos.x == 288 or pos.y == 0 or pos.y == 288): continue
+		
+		Utils.instance_on_parent(self, scn_outler_walls.pick_random(), pos)
+		board_positions[pos] = "outler_wall"
 
 
 func generate_inner_wall() -> void:
-	var count = randi_range(inner_walls_count_min, inner_walls_count_max)
+	var count = randi_range(inner_walls_amount.min, inner_walls_amount.max)
 	
-	for i in range(count):
-		var random_x = randi_range(cell_size_width , viewport_width  - (2 * cell_size_width ))
-		var random_y = randi_range(cell_size_height, viewport_height - (2 * cell_size_height))
-		var random_position = Vector2(random_x, random_y)
-		Utils.instance_on_parent(inner_walls, scn_inner_walls.pick_random(), random_position)
-	pass
-
-
-#func _init_grid_positions_available() -> void:
-	#grid_positions_available.clear()
-	#for x in range(0, viewport_width, cell_size_width):
-		#for y in range(0, viewport_height, cell_size_height):
-			#grid_positions_available.append(Vector2(x, y))
-#
-#
-
-#func get_random_position():
-	#var rand_index = randi_range(0, grid_positions_available.size()-1)
-	#var rand_position = grid_positions_available[rand_index]
-	#grid_positions_available.remove_at(rand_index)
-	#return rand_position
-	#pass
-
-
-
-
+	for i in count:
+		var random_position = board_positions_empty.keys().pick_random()
+		Utils.instance_on_parent(self, scn_inner_walls.pick_random(), random_position)
+		board_positions[random_position] = "inner_walls"
 
