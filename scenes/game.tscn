@@ -50,12 +50,6 @@ scn_floors = Array[PackedScene]([ExtResource("2_2xs7r"), ExtResource("3_igyg0"),
 scn_outler_walls = Array[PackedScene]([ExtResource("2_4llki"), ExtResource("3_u7nj5"), ExtResource("4_yijmb")])
 scn_inner_walls = Array[PackedScene]([ExtResource("13_qdsu1"), ExtResource("14_0wr0q"), ExtResource("15_ssgjd"), ExtResource("16_etrng"), ExtResource("17_1ojnm"), ExtResource("18_yp7uv"), ExtResource("19_v8agq"), ExtResource("20_dsbse")])
 
-[node name="floors" type="Node2D" parent="board"]
-
-[node name="outler_walls" type="Node2D" parent="board"]
-
-[node name="inner_walls" type="Node2D" parent="board"]
-
 [node name="playground" type="Node2D" parent="."]
 visible = false
 

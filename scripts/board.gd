@@ -7,9 +7,6 @@ var board_size := Vector2(
 )
 var cell_size := Vector2(32, 32)
 
-var food_amount := MinMax.new(1, 5)
-var inner_walls_amount := MinMax.new(5, 9)
-
 var board_positions: Dictionary = {}
 var board_positions_occupied: Dictionary:
 	set(value): pass
@@ -28,13 +25,12 @@ var board_positions_empty: Dictionary:
 			empty_positions[pos] = null
 		return empty_positions
 
+var food_amount := MinMax.new(1, 5)
+var inner_walls_amount := MinMax.new(5, 9)
+
 @export var scn_floors : Array[PackedScene] = []
 @export var scn_outler_walls : Array[PackedScene] = []
 @export var scn_inner_walls : Array[PackedScene] = []
-
-@onready var floors = $floors
-@onready var outler_walls = $outler_walls
-@onready var inner_walls = $inner_walls
 
 
 func _ready():
@@ -69,10 +65,10 @@ func generate_outer_wall() -> void:
 
 
 func generate_inner_wall() -> void:
-	var count = randi_range(inner_walls_amount.min, inner_walls_amount.max)
+	var count = randi_range(inner_walls_amount.minimum, inner_walls_amount.maximum)
 	
 	for i in count:
-		var random_position = board_positions_empty.keys().pick_random()
-		Utils.instance_on_parent(self, scn_inner_walls.pick_random(), random_position)
-		board_positions[random_position] = "inner_walls"
+		var pos = board_positions_empty.keys().pick_random()
+		Utils.instance_on_parent(self, scn_inner_walls.pick_random(), pos)
+		board_positions[pos] = "inner_wall"
 

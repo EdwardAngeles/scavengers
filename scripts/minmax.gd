@@ -1,9 +1,9 @@
 class_name MinMax
 
-var min: int
-var max: int
+var minimum: int
+var maximum: int
 
-func _init(min: int, max: int):
-	self.min = min
-	self.max = max
+func _init(minimum: int, maximum: int):
+	self.minimum = minimum
+	self.maximum = maximum
 	
