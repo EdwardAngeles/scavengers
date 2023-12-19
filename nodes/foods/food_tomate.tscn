@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://dpos84gwjffuo"]
+
+[ext_resource type="PackedScene" uid="uid://cljsk1jbusdd1" path="res://nodes/foods/food_parent.tscn" id="1_vmhc5"]
+[ext_resource type="Texture2D" uid="uid://bng5lyqsj6c44" path="res://sprites/food_tomate.png" id="2_s2dbn"]
+
+[node name="food_tomate" instance=ExtResource("1_vmhc5")]
+
+[node name="sprite" parent="." index="0"]
+texture = ExtResource("2_s2dbn")

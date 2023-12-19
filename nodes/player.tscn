@@ -1,0 +1,81 @@
+[gd_scene load_steps=13 format=3 uid="uid://beiirydfikduq"]
+
+[ext_resource type="Texture2D" uid="uid://boqcnc6etaf1" path="res://sprites/player_attack_0.png" id="1_c0a4b"]
+[ext_resource type="Texture2D" uid="uid://c5a1427bjuba4" path="res://sprites/player_idle_0.png" id="1_qg5o7"]
+[ext_resource type="Texture2D" uid="uid://c31uv3plggrjw" path="res://sprites/player_attack_1.png" id="2_0k7rx"]
+[ext_resource type="Texture2D" uid="uid://b52c0235017xq" path="res://sprites/player_idle_1.png" id="2_wpkke"]
+[ext_resource type="Texture2D" uid="uid://d1dpt13btvhmi" path="res://sprites/player_idle_2.png" id="3_5exg2"]
+[ext_resource type="Texture2D" uid="uid://cbr74jvfum4fo" path="res://sprites/player_hit_0.png" id="3_hloht"]
+[ext_resource type="Texture2D" uid="uid://ibvns8hfqgl4" path="res://sprites/player_idle_3.png" id="4_1ciq8"]
+[ext_resource type="Texture2D" uid="uid://sgtoewhhwik0" path="res://sprites/player_hit_1.png" id="4_4yupk"]
+[ext_resource type="Texture2D" uid="uid://d3whm68oba7c6" path="res://sprites/player_idle_4.png" id="5_ygq65"]
+[ext_resource type="Texture2D" uid="uid://cfipp0ee3a84j" path="res://sprites/player_idle_5.png" id="6_7x72f"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cxqde"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_c0a4b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_0k7rx")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_hloht")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_4yupk")
+}],
+"loop": false,
+"name": &"hit",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_qg5o7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_wpkke")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_5exg2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_1ciq8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ygq65")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_7x72f")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8spep"]
+size = Vector2(32, 32)
+
+[node name="player" type="Area2D"]
+
+[node name="sprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_cxqde")
+animation = &"idle"
+autoplay = "idle"
+centered = false
+
+[node name="shape" type="CollisionShape2D" parent="."]
+position = Vector2(16, 16)
+shape = SubResource("RectangleShape2D_8spep")
+
+[node name="raycast" type="RayCast2D" parent="."]
+position = Vector2(16, 16)
+target_position = Vector2(32, 2.08165e-12)
+collide_with_areas = true
+collide_with_bodies = false

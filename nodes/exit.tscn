@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bk1aeqi1qa60q"]
+
+[ext_resource type="Texture2D" uid="uid://bbv4hu1k5dpbt" path="res://sprites/exit.png" id="1_kicn6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_caq6v"]
+size = Vector2(32, 32)
+
+[node name="exit" type="Area2D"]
+
+[node name="sprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_kicn6")
+offset = Vector2(16, 16)
+
+[node name="shape" type="CollisionShape2D" parent="."]
+position = Vector2(16, 16)
+shape = SubResource("RectangleShape2D_caq6v")

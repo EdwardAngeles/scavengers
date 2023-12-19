@@ -3,5 +3,6 @@
 [ext_resource type="Texture2D" uid="uid://1bafyjhssrw4" path="res://sprites/white_rect.png" id="1_grd55"]
 
 [node name="floor_parent" type="Sprite2D"]
+z_index = -1
 texture = ExtResource("1_grd55")
 offset = Vector2(16, 16)

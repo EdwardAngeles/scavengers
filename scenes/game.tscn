@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://d7wgwqs8nj71"]
+[gd_scene load_steps=46 format=3 uid="uid://d7wgwqs8nj71"]
 
 [ext_resource type="Script" path="res://scripts/board.gd" id="1_8a7mm"]
 [ext_resource type="Texture2D" uid="uid://coc6nlsbxigfx" path="res://sprites/enemy_one_attack_0.png" id="1_n0g1d"]
@@ -28,18 +28,22 @@
 [ext_resource type="Texture2D" uid="uid://c5a1427bjuba4" path="res://sprites/player_idle_0.png" id="13_rao5w"]
 [ext_resource type="PackedScene" uid="uid://deebd4ifrkqay" path="res://nodes/inner_walls/inner_wall_1.tscn" id="14_0wr0q"]
 [ext_resource type="Texture2D" uid="uid://br0a6nhn27l2m" path="res://sprites/outler_wall_0.png" id="15_m1goc"]
-[ext_resource type="PackedScene" uid="uid://tegbcb7l5xoy" path="res://nodes/inner_walls/inner_wall_2.tscn" id="15_ssgjd"]
+[ext_resource type="PackedScene" path="res://nodes/inner_walls/inner_wall_2.tscn" id="15_ssgjd"]
 [ext_resource type="Texture2D" uid="uid://bxk35dtvnurt5" path="res://sprites/outler_wall_1.png" id="16_a0pn6"]
-[ext_resource type="PackedScene" uid="uid://dblni7dcpdwa3" path="res://nodes/inner_walls/inner_wall_3.tscn" id="16_etrng"]
-[ext_resource type="PackedScene" uid="uid://0i86txdqt50t" path="res://nodes/inner_walls/inner_wall_4.tscn" id="17_1ojnm"]
+[ext_resource type="PackedScene" path="res://nodes/inner_walls/inner_wall_3.tscn" id="16_etrng"]
+[ext_resource type="PackedScene" path="res://nodes/inner_walls/inner_wall_4.tscn" id="17_1ojnm"]
 [ext_resource type="Texture2D" uid="uid://ffgghqp1x2uh" path="res://sprites/outler_wall_2.png" id="17_hfwk7"]
 [ext_resource type="Texture2D" uid="uid://pltrad4tliwb" path="res://sprites/inner_wall_0.png" id="18_nclnj"]
-[ext_resource type="PackedScene" uid="uid://bigbcw2udqbdo" path="res://nodes/inner_walls/inner_wall_5.tscn" id="18_yp7uv"]
+[ext_resource type="PackedScene" path="res://nodes/inner_walls/inner_wall_5.tscn" id="18_yp7uv"]
 [ext_resource type="Texture2D" uid="uid://b4puwn6yeu40i" path="res://sprites/inner_wall_1.png" id="19_gosxq"]
-[ext_resource type="PackedScene" uid="uid://d14hhj4gjkg71" path="res://nodes/inner_walls/inner_wall_6.tscn" id="19_v8agq"]
-[ext_resource type="PackedScene" uid="uid://bqtaiirdya3fj" path="res://nodes/inner_walls/inner_wall_7.tscn" id="20_dsbse"]
+[ext_resource type="PackedScene" path="res://nodes/inner_walls/inner_wall_6.tscn" id="19_v8agq"]
+[ext_resource type="PackedScene" path="res://nodes/inner_walls/inner_wall_7.tscn" id="20_dsbse"]
 [ext_resource type="Texture2D" uid="uid://dqohkf6ffnj57" path="res://sprites/inner_wall_3.png" id="20_tdt0q"]
 [ext_resource type="Texture2D" uid="uid://shc8mqgkeytu" path="res://sprites/inner_wall_0_damaged.png" id="21_08yur"]
+[ext_resource type="PackedScene" uid="uid://bk1aeqi1qa60q" path="res://nodes/exit.tscn" id="21_a8dmg"]
+[ext_resource type="PackedScene" uid="uid://beiirydfikduq" path="res://nodes/player.tscn" id="21_pbfpb"]
+[ext_resource type="PackedScene" uid="uid://cydyojc03aoox" path="res://nodes/foods/food_soda.tscn" id="21_yykwt"]
+[ext_resource type="PackedScene" uid="uid://dpos84gwjffuo" path="res://nodes/foods/food_tomate.tscn" id="22_1dfhf"]
 [ext_resource type="Texture2D" uid="uid://bmxgbmxikhyrk" path="res://sprites/inner_wall_7_damaged.png" id="22_t2w1b"]
 
 [node name="world" type="Node2D"]
@@ -49,6 +53,9 @@ script = ExtResource("1_8a7mm")
 scn_floors = Array[PackedScene]([ExtResource("2_2xs7r"), ExtResource("3_igyg0"), ExtResource("4_irl2s"), ExtResource("5_73q05"), ExtResource("6_5exti"), ExtResource("7_45rc0"), ExtResource("8_6aoh6"), ExtResource("9_xceav")])
 scn_outler_walls = Array[PackedScene]([ExtResource("2_4llki"), ExtResource("3_u7nj5"), ExtResource("4_yijmb")])
 scn_inner_walls = Array[PackedScene]([ExtResource("13_qdsu1"), ExtResource("14_0wr0q"), ExtResource("15_ssgjd"), ExtResource("16_etrng"), ExtResource("17_1ojnm"), ExtResource("18_yp7uv"), ExtResource("19_v8agq"), ExtResource("20_dsbse")])
+scn_foods = Array[PackedScene]([ExtResource("21_yykwt"), ExtResource("22_1dfhf")])
+scn_player = ExtResource("21_pbfpb")
+scn_exit = ExtResource("21_a8dmg")
 
 [node name="playground" type="Node2D" parent="."]
 visible = false

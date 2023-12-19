@@ -28,17 +28,27 @@ var board_positions_empty: Dictionary:
 var food_amount := MinMax.new(1, 5)
 var inner_walls_amount := MinMax.new(5, 9)
 
-@export var scn_floors : Array[PackedScene] = []
-@export var scn_outler_walls : Array[PackedScene] = []
-@export var scn_inner_walls : Array[PackedScene] = []
+@export var scn_floors: Array[PackedScene] = []
+@export var scn_outler_walls: Array[PackedScene] = []
+@export var scn_inner_walls: Array[PackedScene] = []
+
+@export var scn_foods: Array[PackedScene] = []
+
+@export var scn_player: PackedScene = null
+@export var scn_exit: PackedScene = null
 
 
 func _ready():
 	init_board_positions()
 	
+	place_player()
+	place_exit()
+	
 	generate_floors()
 	generate_outer_wall()
 	generate_inner_wall()
+	
+	generate_foods()
 
 
 func _process(delta):
@@ -49,6 +59,20 @@ func init_board_positions() -> void:
 	for x in range(0, board_size.x, cell_size.x):
 		for y in range(0, board_size.y, cell_size.y):
 			board_positions[Vector2(x, y)] = null
+
+
+func place_player() -> void:
+	const pos = Vector2(32, 256)
+	
+	Utils.instance_on_parent(self, scn_player, pos)
+	board_positions[pos] = "player"
+
+
+func place_exit() -> void:
+	const pos = Vector2(256, 32)
+	
+	Utils.instance_on_parent(self, scn_exit, pos)
+	board_positions[pos] = "exit"
 
 
 func generate_floors() -> void:
@@ -71,4 +95,13 @@ func generate_inner_wall() -> void:
 		var pos = board_positions_empty.keys().pick_random()
 		Utils.instance_on_parent(self, scn_inner_walls.pick_random(), pos)
 		board_positions[pos] = "inner_wall"
+
+
+func generate_foods() -> void:
+	var count = randi_range(food_amount.minimum, food_amount.maximum)
+	
+	for i in count:
+		var pos = board_positions_empty.keys().pick_random()
+		Utils.instance_on_parent(self, scn_foods.pick_random(), pos)
+		board_positions[pos] = "food"
 
