@@ -53,7 +53,7 @@ script = ExtResource("1_8a7mm")
 scn_floors = Array[PackedScene]([ExtResource("2_2xs7r"), ExtResource("3_igyg0"), ExtResource("4_irl2s"), ExtResource("5_73q05"), ExtResource("6_5exti"), ExtResource("7_45rc0"), ExtResource("8_6aoh6"), ExtResource("9_xceav")])
 scn_outler_walls = Array[PackedScene]([ExtResource("2_4llki"), ExtResource("3_u7nj5"), ExtResource("4_yijmb")])
 scn_inner_walls = Array[PackedScene]([ExtResource("13_qdsu1"), ExtResource("14_0wr0q"), ExtResource("15_ssgjd"), ExtResource("16_etrng"), ExtResource("17_1ojnm"), ExtResource("18_yp7uv"), ExtResource("19_v8agq"), ExtResource("20_dsbse")])
-scn_foods = Array[PackedScene]([ExtResource("21_yykwt"), ExtResource("22_1dfhf")])
+scn_foods = Array[PackedScene]([ExtResource("21_yykwt"), ExtResource("22_1dfhf"), null])
 scn_player = ExtResource("21_pbfpb")
 scn_exit = ExtResource("21_a8dmg")
 
